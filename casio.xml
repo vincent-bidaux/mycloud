@@ -4,6 +4,9 @@
     <!-- Déclaration de l'interpréteur -->
     <interpreteur>XMLint</interpreteur>
 
+    <!-- Page de démarrage du service -->
+    <debut page="1" />
+    
     <!-- Page d'accueil -->
     <page numero="1">
         <ecran>
