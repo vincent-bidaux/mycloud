@@ -18,7 +18,9 @@
 
             <!-- Introduction -->
             <position x="2" y="3" />
-            <ecrit>Découvrez les modèles iconiques des années 80 et 90 !</ecrit>
+            <ecrit>Découvrez les modèles iconiques</ecrit>
+            <position x="2" y="4" />
+            <ecrit>des années 80 et 90 !</ecrit>
 
             <!-- Menu -->
             <position x="5" y="6" />
@@ -36,9 +38,9 @@
         </entree>
 
         <action>
-            <si valeur="1" page="f91w" />
-            <si valeur="2" page="ca53w" />
-            <sinon page="accueil" />
+            <si valeur="1" nom="f91w" />
+            <si valeur="2" nom="ca53w" />
+            <sinon nom="accueil" />
         </action>
     </page>
 
@@ -48,34 +50,28 @@
             <efface />
 
             <!-- Titre -->
-            <position x="10" y="1" />
+            <position x="8" y="1" />
             <ecrit>📌 Casio F-91W</ecrit>
 
             <!-- Description -->
             <position x="2" y="3" />
-            <ecrit>Modèle lancé en 1989. Très populaire pour sa</ecrit>
+            <ecrit>Montre sortie en 1989.</ecrit>
             <position x="2" y="4" />
-            <ecrit>simplicité, son autonomie et son prix abordable.</ecrit>
-
-            <!-- Caractéristiques -->
-            <position x="2" y="6" />
-            <ecrit>- Affichage LCD</ecrit>
-            <position x="2" y="7" />
-            <ecrit>- Chronomètre et alarme</ecrit>
-            <position x="2" y="8" />
-            <ecrit>- Étanchéité limitée</ecrit>
+            <ecrit>Autonomie de 7 ans.</ecrit>
+            <position x="2" y="5" />
+            <ecrit>Affichage LCD rétroéclairé.</ecrit>
 
             <!-- Retour -->
-            <position x="2" y="12" />
-            <ecrit>Appuyez sur ENTREE pour revenir au menu.</ecrit>
+            <position x="2" y="10" />
+            <ecrit>Appuyez sur ENTREE pour revenir.</ecrit>
         </ecran>
 
         <entree>
-            <saisie longueur="0" />
+            <saisie longueur="1" />
         </entree>
 
         <action>
-            <sinon page="accueil" />
+            <sinon nom="accueil" />
         </action>
     </page>
 
@@ -85,34 +81,26 @@
             <efface />
 
             <!-- Titre -->
-            <position x="10" y="1" />
+            <position x="8" y="1" />
             <ecrit>📌 Casio CA-53W</ecrit>
 
             <!-- Description -->
             <position x="2" y="3" />
-            <ecrit>La montre calculatrice iconique des années 80 !</ecrit>
+            <ecrit>La montre calculatrice.</ecrit>
             <position x="2" y="4" />
-            <ecrit>Populaire grâce à son design rétro et ses touches.</ecrit>
-
-            <!-- Caractéristiques -->
-            <position x="2" y="6" />
-            <ecrit>- Calculatrice intégrée</ecrit>
-            <position x="2" y="7" />
-            <ecrit>- Double affichage horaire</ecrit>
-            <position x="2" y="8" />
-            <ecrit>- Étanchéité limitée</ecrit>
+            <ecrit>Très populaire dans les années 80.</ecrit>
 
             <!-- Retour -->
-            <position x="2" y="12" />
-            <ecrit>Appuyez sur ENTREE pour revenir au menu.</ecrit>
+            <position x="2" y="10" />
+            <ecrit>Appuyez sur ENTREE pour revenir.</ecrit>
         </ecran>
 
         <entree>
-            <saisie longueur="0" />
+            <saisie longueur="1" />
         </entree>
 
         <action>
-            <sinon page="accueil" />
+            <sinon nom="accueil" />
         </action>
     </page>
 
