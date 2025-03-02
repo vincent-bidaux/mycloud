@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE service SYSTEM "service.dtd">
 <service nom="CASIO">
-    <!-- Déclaration de l'interpréteur -->
-    <interpreteur>XMLint</interpreteur>
+    <!-- Interpréteur avec URL -->
+    <interpreteur url="http://www.minipavi.fr/XMLint/?xurl="/>
 
     <!-- Définition de la page de démarrage -->
     <debut nom="accueil" />
@@ -10,98 +10,115 @@
     <!-- Page d'accueil -->
     <page nom="accueil">
         <ecran>
-            <efface />
+            <efface/>
 
-            <!-- Titre centré -->
-            <position x="10" y="1" />
-            <ecrit>🔹 CASIO Vintage 🔹</ecrit>
+            <!-- Titre principal -->
+            <position ligne="1" col="10"/>
+            <doublehauteur/>
+            <couleur texte="jaune" fond="bleu"/>
+            <ecrit texte="🔹 CASIO Vintage 🔹"/>
 
             <!-- Introduction -->
-            <position x="2" y="3" />
-            <ecrit>Découvrez les modèles iconiques</ecrit>
-            <position x="2" y="4" />
-            <ecrit>des années 80 et 90 !</ecrit>
+            <position ligne="3" col="2"/>
+            <ecrit texte="Découvrez les modèles iconiques"/>
+            <position ligne="4" col="2"/>
+            <ecrit texte="des années 80 et 90 !"/>
 
             <!-- Menu -->
-            <position x="5" y="6" />
-            <ecrit>1. Casio F-91W</ecrit>
-            <position x="5" y="8" />
-            <ecrit>2. Casio CA-53W</ecrit>
+            <position ligne="6" col="5"/>
+            <souligne mode="actif"/>
+            <ecrit texte=" 1 "/>
+            <souligne mode="inactif"/>
+            <couleur texte="vert"/>
+            <ecrit texte=" Casio F-91W"/>
+
+            <position ligne="8" col="5"/>
+            <souligne mode="actif"/>
+            <ecrit texte=" 2 "/>
+            <souligne mode="inactif"/>
+            <couleur texte="vert"/>
+            <ecrit texte=" Casio CA-53W"/>
 
             <!-- Instructions -->
-            <position x="2" y="12" />
-            <ecrit>Entrez le numéro du modèle :</ecrit>
+            <position ligne="12" col="2"/>
+            <couleur texte="blanc" fond="bleu"/>
+            <ecrit texte="Entrez le numéro du modèle :"/>
         </ecran>
 
         <entree>
-            <zonesaisie x="30" y="12" longueur="1" />
+            <zonesaisie ligne="12" col="30" longueur="1" curseur="visible"/>
+            <validation touche="envoi"/>
         </entree>
 
-        <action>
-            <si valeur="1" nom="f91w" />
-            <si valeur="2" nom="ca53w" />
-            <sinon nom="accueil" />
+        <action defaut="Erreur de saisie!">
+            <saisie choix="1" touche="envoi" suivant="f91w"/>
+            <saisie choix="2" touche="envoi" suivant="ca53w"/>
         </action>
     </page>
 
     <!-- Page Casio F-91W -->
     <page nom="f91w">
         <ecran>
-            <efface />
+            <efface/>
 
             <!-- Titre -->
-            <position x="8" y="1" />
-            <ecrit>📌 Casio F-91W</ecrit>
+            <position ligne="1" col="8"/>
+            <doublehauteur/>
+            <couleur texte="jaune"/>
+            <ecrit texte="📌 Casio F-91W"/>
 
             <!-- Description -->
-            <position x="2" y="3" />
-            <ecrit>Montre sortie en 1989.</ecrit>
-            <position x="2" y="4" />
-            <ecrit>Autonomie de 7 ans.</ecrit>
-            <position x="2" y="5" />
-            <ecrit>Affichage LCD rétroéclairé.</ecrit>
-
+            <position ligne="3" col="2"/>
+            <ecrit texte="Montre sortie en 1989. "/>
+            <position ligne="4" col="2"/>
+            <ecrit texte="Autonomie de 7 ans."/>
+            <position ligne="5" col="2"/>
+            <ecrit texte="Affichage LCD rétroéclairé."/>
+            
             <!-- Retour -->
-            <position x="2" y="10" />
-            <ecrit>Appuyez sur ENTREE pour revenir.</ecrit>
+            <position ligne="10" col="2"/>
+            <ecrit texte="Appuyez sur ENTREE pour revenir."/>
         </ecran>
 
         <entree>
-            <saisie longueur="1" />
+            <saisie longueur="1"/>
+            <validation touche="envoi"/>
         </entree>
 
         <action>
-            <sinon nom="accueil" />
+            <saisie touche="envoi" suivant="accueil"/>
         </action>
     </page>
 
     <!-- Page Casio CA-53W -->
     <page nom="ca53w">
         <ecran>
-            <efface />
+            <efface/>
 
             <!-- Titre -->
-            <position x="8" y="1" />
-            <ecrit>📌 Casio CA-53W</ecrit>
+            <position ligne="1" col="8"/>
+            <doublehauteur/>
+            <couleur texte="jaune"/>
+            <ecrit texte="📌 Casio CA-53W"/>
 
             <!-- Description -->
-            <position x="2" y="3" />
-            <ecrit>La montre calculatrice.</ecrit>
-            <position x="2" y="4" />
-            <ecrit>Très populaire dans les années 80.</ecrit>
+            <position ligne="3" col="2"/>
+            <ecrit texte="La montre calculatrice."/>
+            <position ligne="4" col="2"/>
+            <ecrit texte="Très populaire dans les années 80."/>
 
             <!-- Retour -->
-            <position x="2" y="10" />
-            <ecrit>Appuyez sur ENTREE pour revenir.</ecrit>
+            <position ligne="10" col="2"/>
+            <ecrit texte="Appuyez sur ENTREE pour revenir."/>
         </ecran>
 
         <entree>
-            <saisie longueur="1" />
+            <saisie longueur="1"/>
+            <validation touche="envoi"/>
         </entree>
 
         <action>
-            <sinon nom="accueil" />
+            <saisie touche="envoi" suivant="accueil"/>
         </action>
     </page>
-
 </service>
