@@ -5,7 +5,7 @@
     <interpreteur>XMLint</interpreteur>
 
     <!-- Définition de la page de démarrage -->
-    <debut page="accueil" />
+    <debut nom="accueil" />
 
     <!-- Page d'accueil -->
     <page nom="accueil">
