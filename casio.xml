@@ -4,24 +4,23 @@
     <!-- Déclaration de l'interpréteur -->
     <interpreteur>XMLint</interpreteur>
 
-    <!-- Page de démarrage du service -->
-    <debut page="1" />
-    
+    <!-- Définition de la page de démarrage -->
+    <debut page="accueil" />
+
     <!-- Page d'accueil -->
-    <page numero="1">
+    <page nom="accueil">
         <ecran>
-            <!-- Efface l'écran -->
             <efface />
 
             <!-- Titre centré -->
-            <position x="12" y="1" />
-            <ecrit>Bienvenue sur CASIO Vintage</ecrit>
+            <position x="10" y="1" />
+            <ecrit>🔹 CASIO Vintage 🔹</ecrit>
 
-            <!-- Description -->
+            <!-- Introduction -->
             <position x="2" y="3" />
-            <ecrit>Découvrez les modèles emblématiques de montres Casio des années 1980 et 1990.</ecrit>
+            <ecrit>Découvrez les modèles iconiques des années 80 et 90 !</ecrit>
 
-            <!-- Menu des modèles -->
+            <!-- Menu -->
             <position x="5" y="6" />
             <ecrit>1. Casio F-91W</ecrit>
             <position x="5" y="8" />
@@ -29,80 +28,92 @@
 
             <!-- Instructions -->
             <position x="2" y="12" />
-            <ecrit>Veuillez sélectionner un modèle en entrant son numéro :</ecrit>
+            <ecrit>Entrez le numéro du modèle :</ecrit>
         </ecran>
 
-        <!-- Zone de saisie pour le menu -->
         <entree>
-            <zonesaisie x="45" y="12" longueur="1" />
+            <zonesaisie x="30" y="12" longueur="1" />
         </entree>
 
-        <!-- Actions en fonction de la saisie utilisateur -->
         <action>
-            <!-- Si l'utilisateur saisit '1', aller à la page 2 -->
-            <si valeur="1" page="2" />
-            <!-- Si l'utilisateur saisit '2', aller à la page 3 -->
-            <si valeur="2" page="3" />
-            <!-- Pour toute autre saisie, rester sur la page actuelle -->
-            <sinon page="1" />
+            <si valeur="1" page="f91w" />
+            <si valeur="2" page="ca53w" />
+            <sinon page="accueil" />
         </action>
     </page>
 
-    <!-- Page 2 : Description du modèle Casio F-91W -->
-    <page numero="2">
+    <!-- Page Casio F-91W -->
+    <page nom="f91w">
         <ecran>
             <efface />
 
             <!-- Titre -->
             <position x="10" y="1" />
-            <ecrit>Modèle : Casio F-91W</ecrit>
+            <ecrit>📌 Casio F-91W</ecrit>
 
             <!-- Description -->
             <position x="2" y="3" />
-            <ecrit>La Casio F-91W, lancée en 1989, est une montre numérique emblématique reconnue pour sa simplicité, sa fiabilité et son design intemporel. Elle offre des fonctionnalités basiques telles que l'heure, le chronomètre, l'alarme et une lumière LED verte. Sa popularité demeure intacte depuis des décennies, en faisant un choix prisé des amateurs de montres vintage. :contentReference[oaicite:3]{index=3}</ecrit>
+            <ecrit>Modèle lancé en 1989. Très populaire pour sa</ecrit>
+            <position x="2" y="4" />
+            <ecrit>simplicité, son autonomie et son prix abordable.</ecrit>
 
-            <!-- Retour au menu principal -->
+            <!-- Caractéristiques -->
+            <position x="2" y="6" />
+            <ecrit>- Affichage LCD</ecrit>
+            <position x="2" y="7" />
+            <ecrit>- Chronomètre et alarme</ecrit>
+            <position x="2" y="8" />
+            <ecrit>- Étanchéité limitée</ecrit>
+
+            <!-- Retour -->
             <position x="2" y="12" />
-            <ecrit>Appuyez sur ENVOI pour retourner au menu principal.</ecrit>
+            <ecrit>Appuyez sur ENTREE pour revenir au menu.</ecrit>
         </ecran>
 
-        <!-- Zone de saisie pour retour au menu -->
         <entree>
             <saisie longueur="0" />
         </entree>
 
-        <!-- Action de retour à la page d'accueil -->
         <action>
-            <sinon page="1" />
+            <sinon page="accueil" />
         </action>
     </page>
 
-    <!-- Page 3 : Description du modèle Casio CA-53W -->
-    <page numero="3">
+    <!-- Page Casio CA-53W -->
+    <page nom="ca53w">
         <ecran>
             <efface />
 
             <!-- Titre -->
             <position x="10" y="1" />
-            <ecrit>Modèle : Casio CA-53W</ecrit>
+            <ecrit>📌 Casio CA-53W</ecrit>
 
             <!-- Description -->
             <position x="2" y="3" />
-            <ecrit>La Casio CA-53W, introduite en 1988, est une montre calculatrice dotée d'un clavier à 8 chiffres permettant des opérations de base telles que l'addition, la soustraction, la multiplication et la division. Son design rétro et ses fonctionnalités pratiques en ont fait un accessoire emblématique des années 1980, apprécié des amateurs de gadgets vintage. :contentReference[oaicite:4]{index=4}</ecrit>
+            <ecrit>La montre calculatrice iconique des années 80 !</ecrit>
+            <position x="2" y="4" />
+            <ecrit>Populaire grâce à son design rétro et ses touches.</ecrit>
 
-            <!-- Retour au menu principal -->
+            <!-- Caractéristiques -->
+            <position x="2" y="6" />
+            <ecrit>- Calculatrice intégrée</ecrit>
+            <position x="2" y="7" />
+            <ecrit>- Double affichage horaire</ecrit>
+            <position x="2" y="8" />
+            <ecrit>- Étanchéité limitée</ecrit>
+
+            <!-- Retour -->
             <position x="2" y="12" />
-            <ecrit>Appuyez sur ENVOI pour retourner au menu principal.</ecrit>
+            <ecrit>Appuyez sur ENTREE pour revenir au menu.</ecrit>
         </ecran>
 
-        <!-- Zone de saisie pour retour au menu -->
         <entree>
             <saisie longueur="0" />
         </entree>
 
-        <!-- Action de retour à la page d'accueil -->
         <action>
-            <sinon page="1" />
+            <sinon page="accueil" />
         </action>
     </page>
+
 </service>
