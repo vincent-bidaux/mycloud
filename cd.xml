@@ -1,0 +1,407 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<!-- 
+Fichier XML de démonstration
+Service de demo accessible depuis MiniPavi, code d'accès: 3615*DEMOXML 
+ -->
+<!--  On commence toujours par la balise "service"  -->
+<service>
+<!--  URL de l'interpreteur XML en cas d'appel direct du fichier XML.
+	Ici, le service XMLint de MiniPavi  -->
+<interpreteur url="http://www.minipavi.fr/XMLint/?xurl="/>
+<!--  Nom de la page de démarrage du service  -->
+<debut nom="sommaire"/>
+<!--  Début de la page "sommaire"  -->
+<page nom="sommaire">
+<!--  On indique ce que l'on affiche  -->
+<ecran>
+<efface/>
+<position ligne="1" col="1"/>
+<graphique/>
+<couleur texte="rouge"/>
+<repete caractere="X" nombre="40"/>
+<texte/>
+<position ligne="3" col="1"/>
+<doublehauteur/>
+<couleur texte="jaune" fond="bleu"/>
+<ecrit texte=" Service Minitel 3615 CECILOVISION "/>
+<rectangle ligne="5" col="5" largeur="30" hauteur="4" couleur="bleu"/>
+<position ligne="5" col="11"/>
+<couleur texte="bleu" fond="rouge"/>
+<inversion mode="actif"/>
+<ecrit texte=" "/>
+<!--  Contrainte du videotex: L'espace est nécessaire pour valider la couleur de fond  -->
+<date/>
+<ecrit texte=" "/>
+<heure/>
+<position ligne="6" col="7"/>
+<couleur texte="bleu" fond="blanc"/>
+<inversion mode="actif"/>
+<clignote mode="actif"/>
+<ecrit texte=" Connexion intime"/>
+<position ligne="7" col="8"/>
+<couleur texte="bleu" fond="blanc"/>
+<inversion mode="actif"/>
+<clignote mode="actif"/>
+<ecrit texte=" avec une créative"/>
+<position ligne="8" col="11"/>
+<couleur texte="bleu" fond="blanc"/>
+<inversion mode="actif"/>
+<clignote mode="actif"/>
+<ecrit texte=" en roue libre”"/>
+<position ligne="10" col="10"/>
+<couleur texte="jaune"/>
+<ecrit texte="l’univers haut en couleurs"/>
+<position ligne="11" col="7"/>
+<couleur texte="jaune"/>
+<ecrit texte="de Cécile : illustratrice 3D"/>
+<position ligne="12" col="3"/>
+<couleur texte="jaune"/>
+<ecrit texte="séductrice à vélo, experte en cadenas,"/>
+<position ligne="13" col="7"/>
+<couleur texte="jaune"/>
+<ecrit texte="et philosophe de comptoir."/>
+<position ligne="16" col="4"/>
+<souligne mode="actif"/>
+<ecrit texte=" "/>
+<doublelargeur/>
+<inversion mode="actif"/>
+<ecrit texte=" 1 "/>
+<souligne mode="inactif"/>
+<inversion mode="inactif"/>
+<taillenormale/>
+<couleur texte="vert"/>
+<ecrit texte=" Section 1 : La Galerie des Sous-vêtements"/>
+<position ligne="17" col="4"/>
+<souligne mode="actif"/>
+<ecrit texte=" "/>
+<doublelargeur/>
+<inversion mode="actif"/>
+<ecrit texte=" 2 "/>
+<souligne mode="inactif"/>
+<inversion mode="inactif"/>
+<taillenormale/>
+<couleur texte="vert"/>
+<ecrit texte=" Section 2 : Les Chroniques de la Pallice"/>
+<position ligne="18" col="4"/>
+<souligne mode="actif"/>
+<ecrit texte=" "/>
+<doublelargeur/>
+<inversion mode="actif"/>
+<ecrit texte=" 3 "/>
+<souligne mode="inactif"/>
+<inversion mode="inactif"/>
+<taillenormale/>
+<couleur texte="vert"/>
+<ecrit texte=" Section 3 : Hacke-moi si tu peux"/>
+<position ligne="19" col="4"/>
+<souligne mode="actif"/>
+<ecrit texte=" "/>
+<doublelargeur/>
+<inversion mode="actif"/>
+<ecrit texte=" 4 "/>
+<souligne mode="inactif"/>
+<inversion mode="inactif"/>
+
+
+<ecrit texte=" "/>
+<effacefindeligne/>
+</ecran>
+<!--  On indique les saisies possibles.
+		Les touches de fonctions absentes n'auront aucun effet (sauf ANNULATION & CORRECTION pour la saisie)  -->
+<entree>
+<zonesaisie ligne="24" col="15" longueur="1" curseur="visible"/>
+<validation touche="envoi"/>
+<validation touche="repetition"/>
+</entree>
+<!--  On indique vers quelle page on va selon le saisie effectuée  -->
+<action defaut="Erreur de saisie!">
+<!--  Le message 'defaut' s'affiche en ligne 0 si un choix incorrect est fait  -->
+<saisie choix="1" touche="envoi" suivant="page1"/>
+<saisie choix="2" touche="envoi" suivant="page2"/>
+<saisie choix="3" touche="envoi" suivant="page3"/>
+
+<saisie touche="repetition" suivant="sommaire"/>
+</action>
+</page>
+<!--  Début de la page "page1"  -->
+<page nom="page1">
+<ecran>
+<affiche url="http://www.minipavi.fr/XMLint/pirate.vdt"/>
+<position ligne="24" col="1"/>
+<couleur texte="blanc" fond="bleu"/>
+<souligne mode="actif"/>
+<ecrit texte=" "/>
+<inversion mode="actif"/>
+<ecrit texte=" Suite "/>
+<souligne mode="inactif"/>
+<inversion mode="inactif"/>
+<ecrit texte=" ou"/>
+<souligne mode="actif"/>
+<ecrit texte=" "/>
+<inversion mode="actif"/>
+<ecrit texte=" Sommaire "/>
+<souligne mode="inactif"/>
+<inversion mode="inactif"/>
+<ecrit texte=" "/>
+<effacefindeligne/>
+</ecran>
+<entree>
+<zonesaisie ligne="1" col="1" longueur="1" curseur="invisible"/>
+<validation touche="sommaire"/>
+<validation touche="repetition"/>
+<validation touche="suite"/>
+</entree>
+<action>
+<saisie touche="sommaire" suivant="sommaire"/>
+<saisie touche="repetition" suivant="page1"/>
+<saisie touche="suite" suivant="page2"/>
+</action>
+</page>
+<!--  Début de la page "page2"  -->
+<page nom="page2">
+<ecran>
+<affiche url="http://www.minipavi.fr/XMLint/moto.vdt"/>
+<position ligne="24" col="1"/>
+<couleur texte="blanc" fond="bleu"/>
+<souligne mode="actif"/>
+<ecrit texte=" "/>
+<inversion mode="actif"/>
+<ecrit texte=" Suite "/>
+<souligne mode="inactif"/>
+<inversion mode="inactif"/>
+<ecrit texte=" "/>
+<souligne mode="actif"/>
+<ecrit texte=" "/>
+<inversion mode="actif"/>
+<ecrit texte=" Retour "/>
+<souligne mode="inactif"/>
+<inversion mode="inactif"/>
+<ecrit texte=" ou"/>
+<souligne mode="actif"/>
+<ecrit texte=" "/>
+<inversion mode="actif"/>
+<ecrit texte=" Sommaire "/>
+<souligne mode="inactif"/>
+<inversion mode="inactif"/>
+<ecrit texte=" "/>
+<effacefindeligne/>
+</ecran>
+<entree>
+<zonesaisie ligne="1" col="1" longueur="1" curseur="invisible"/>
+<validation touche="sommaire"/>
+<validation touche="repetition"/>
+<validation touche="suite"/>
+<validation touche="retour"/>
+</entree>
+<action>
+<saisie touche="sommaire" suivant="sommaire"/>
+<saisie touche="repetition" suivant="page2"/>
+<saisie touche="suite" suivant="page3"/>
+<saisie touche="retour" suivant="page1"/>
+</action>
+</page>
+<!--  Début de la page "page3"  -->
+<page nom="page3">
+<ecran>
+<affiche url="http://www.minipavi.fr/XMLint/salut.vdt"/>
+<rectangle ligne="10" col="10" largeur="20" hauteur="11" couleur="bleu"/>
+<rectangle ligne="11" col="11" largeur="20" hauteur="11" couleur="vert"/>
+<position ligne="15" col="14"/>
+<couleur texte="magenta" fond="jaune"/>
+<inversion mode="actif"/>
+<ecrit texte=" SURIMPRESSION "/>
+<position ligne="24" col="1"/>
+<couleur texte="blanc" fond="bleu"/>
+<souligne mode="actif"/>
+<ecrit texte=" "/>
+<inversion mode="actif"/>
+<ecrit texte=" Retour "/>
+<souligne mode="inactif"/>
+<inversion mode="inactif"/>
+<ecrit texte=" ou"/>
+<souligne mode="actif"/>
+<ecrit texte=" "/>
+<inversion mode="actif"/>
+<ecrit texte=" Sommaire "/>
+<souligne mode="inactif"/>
+<inversion mode="inactif"/>
+<ecrit texte=" "/>
+<effacefindeligne/>
+</ecran>
+<entree>
+<zonesaisie ligne="1" col="1" longueur="1" curseur="invisible"/>
+<validation touche="sommaire"/>
+<validation touche="repetition"/>
+<validation touche="retour"/>
+</entree>
+<action>
+<saisie touche="sommaire" suivant="sommaire"/>
+<saisie touche="repetition" suivant="page3"/>
+<saisie touche="retour" suivant="page2"/>
+</action>
+</page>
+<!--  Début de la page "envoimessage"  -->
+<page nom="envoimessage">
+<ecran>
+<efface/>
+<position ligne="2" col="1"/>
+<couleur texte="bleu" fond="blanc"/>
+<doublehauteur/>
+<inversion mode="actif"/>
+<ecrit texte=" Email à contact@minipavi.fr"/>
+<effacefindeligne/>
+<position ligne="23" col="1"/>
+<couleur texte="magenta"/>
+<repete caractere="_" nombre="40"/>
+<couleur texte="blanc" fond="bleu"/>
+<ecrit texte=" Envoyer"/>
+<souligne mode="actif"/>
+<ecrit texte=" "/>
+<inversion mode="actif"/>
+<ecrit texte=" Envoi "/>
+<souligne mode="inactif"/>
+<inversion mode="inactif"/>
+<ecrit texte=" sinon"/>
+<souligne mode="actif"/>
+<ecrit texte=" "/>
+<inversion mode="actif"/>
+<ecrit texte=" Sommaire "/>
+<souligne mode="inactif"/>
+<inversion mode="inactif"/>
+<ecrit texte=" "/>
+<effacefindeligne/>
+</ecran>
+<entree>
+<zonemessage ligne="3" hauteur="20" curseur="visible"/>
+<validation touche="envoi"/>
+<validation touche="sommaire"/>
+</entree>
+<action>
+<saisie touche="sommaire" suivant="sommaire"/>
+<saisie touche="envoi" suivant="sommaire" email="contact@minipavi.fr" sujet="Contact sur le site" msgok="Message bien envoyé!"/>
+</action>
+</page>
+<page nom="demowebmedia">
+<ecran>
+<efface/>
+<position ligne="1" col="1"/>
+<graphique/>
+<couleur texte="rouge"/>
+<repete caractere="X" nombre="40"/>
+<texte/>
+<position ligne="3" col="1"/>
+<doublehauteur/>
+<couleur texte="jaune" fond="bleu"/>
+<ecrit texte=" DEMONSTRATION WEBMEDIA "/>
+<position ligne="6" col="1"/>
+<ecrit texte=" WebMedia permet de lire une vidéo, "/>
+<position ligne="7" col="1"/>
+<ecrit texte=" jouer un son ou afficher une image. "/>
+<rectangle ligne="9" col="1" largeur="40" hauteur="5" couleur="vert"/>
+<position ligne="10" col="1"/>
+<couleur texte="vert" fond="noir"/>
+<inversion mode="actif"/>
+<ecrit texte=" Vous utilisez un émulateur et une"/>
+<position ligne="11" col="1"/>
+<couleur texte="vert" fond="noir"/>
+<inversion mode="actif"/>
+<ecrit texte=" barre verte est présente sous l'écran:"/>
+<position ligne="12" col="1"/>
+<couleur texte="vert" fond="noir"/>
+<inversion mode="actif"/>
+<ecrit texte=" Vous êtes prêt !"/>
+<rectangle ligne="15" col="1" largeur="40" hauteur="6" couleur="rouge"/>
+<position ligne="16" col="3"/>
+<couleur texte="rouge" fond="blanc"/>
+<inversion mode="actif"/>
+<ecrit texte=" Sinon, avec votre mobile, tablette"/>
+<position ligne="17" col="3"/>
+<couleur texte="rouge" fond="blanc"/>
+<inversion mode="actif"/>
+<ecrit texte=" ou ordi, connectez-vous"/>
+<clignote mode="actif"/>
+<ecrit texte=" AVANT"/>
+<clignote mode="inactif"/>
+<ecrit texte=" à :"/>
+<position ligne="18" col="10"/>
+<couleur texte="rouge" fond="blanc"/>
+<inversion mode="actif"/>
+<ecrit texte=" http://wm.minipavi.fr"/>
+<position ligne="19" col="7"/>
+9
+<couleur texte="rouge" fond="blanc"/>
+<inversion mode="actif"/>
+<ecrit texte=" et entrez le code pin : "/>
+<pin/>
+<position ligne="22" col="3"/>
+<inversion mode="actif"/>
+<ecrit texte=" SUITE "/>
+<inversion mode="inactif"/>
+<ecrit texte=" pour voir une vidéo YouTube"/>
+<position ligne="24" col="3"/>
+<inversion mode="actif"/>
+<ecrit texte=" SOMMAIRE "/>
+<inversion mode="inactif"/>
+<ecrit texte=" pour revenir à l'accueil"/>
+</ecran>
+<entree>
+<zonesaisie ligne="24" col="40" longueur="1" curseur="invisible"/>
+<validation touche="suite"/>
+<validation touche="repetition"/>
+<validation touche="sommaire"/>
+</entree>
+<action defaut="Erreur de saisie!">
+<saisie touche="suite" suivant="demowebmedia-youtube"/>
+<saisie touche="repetition" suivant="demowebmedia"/>
+<saisie touche="sommaire" suivant="sommaire"/>
+</action>
+</page>
+<page nom="demowebmedia-youtube">
+<ecran>
+<webmedia type="yt" infos="PE1lzqJCeJ0"/>
+<efface/>
+<rectangle ligne="5" col="5" largeur="30" hauteur="4" couleur="bleu"/>
+<position ligne="6" col="11"/>
+<doublehauteur/>
+<couleur texte="jaune" fond="bleu"/>
+<ecrit texte=" La vidéo YouTube"/>
+<position ligne="8" col="12"/>
+<doublehauteur/>
+<couleur texte="jaune" fond="bleu"/>
+<ecrit texte=" va s'afficher!"/>
+<position ligne="13" col="4"/>
+<couleur texte="jaune"/>
+<ecrit texte="Si vous utilisez l'émulateur avec"/>
+<position ligne="14" col="2"/>
+<couleur texte="jaune"/>
+<ecrit texte="une barre verte sous l'écran, la vidéo"/>
+<position ligne="15" col="7"/>
+<couleur texte="jaune"/>
+<ecrit texte="se joue directement dedans."/>
+<position ligne="17" col="2"/>
+<couleur texte="jaune"/>
+<ecrit texte="Sinon, elle se joue dans l'appareil que"/>
+<position ligne="18" col="4"/>
+<couleur texte="jaune"/>
+<ecrit texte="vous avez préalablement connecté à"/>
+<position ligne="19" col="10"/>
+<couleur texte="jaune"/>
+<ecrit texte="http://wm.minipavi.fr"/>
+<position ligne="22" col="3"/>
+<inversion mode="actif"/>
+<ecrit texte=" SOMMAIRE "/>
+<inversion mode="inactif"/>
+<ecrit texte=" pour revenir à l'accueil"/>
+</ecran>
+<entree>
+<zonesaisie ligne="24" col="40" longueur="1" curseur="invisible"/>
+<validation touche="repetition"/>
+<validation touche="sommaire"/>
+</entree>
+<action defaut="Erreur de saisie!">
+<saisie touche="repetition" suivant="demowebmedia-youtube"/>
+<saisie touche="sommaire" suivant="sommaire"/>
+</action>
+</page>
+</service>
+<!--  On termine toujours par la balise "/service"  -->
